@@ -1,12 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Artikel1 from "../components/Artikel1.astro";
+import Artikel2 from "../components/Artikel2.astro";
+import Artikel3 from "../components/Artikel3.astro";
 import Dato from "../components/Dato.astro";
+import Artikel5 from "../components/Artikel5.astro"
 import image_01 from "../assets/eastside1.webp";
 import image_02 from "../assets/streger1.webp";
-import Artikel2 from "../components/Artikel2.astro";
 import image_03 from "../assets/img3.webp"
-import Artikel3 from "../components/Artikel3.astro";
 import image_04 from "../assets/img4.webp"
 import image_05 from "../assets/img5.webp"
 import image_06 from "../assets/img6.webp"
@@ -14,6 +15,14 @@ import image_07 from "../assets/artikel4.webp"
 import image_08 from "../assets/kalender1.webp"
 import image_09 from "../assets/kalender2.webp"
 import image_10 from "../assets/kalender3.webp"
+import image_11 from "../assets/hack1.webp"
+import image_12 from "../assets/hack2.webp"
+import image_13 from "../assets/hack3.webp"
+import image_14 from "../assets/hack4.webp"
+import image_15 from "../assets/hack5.webp"
+import image_16 from "../assets/hack6.webp"
+import image_17 from "../assets/hack7.webp"
+import image_18 from "../assets/hack8.webp"
 
 ---
 
@@ -71,6 +80,28 @@ import image_10 from "../assets/kalender3.webp"
                 </div>
             </div>
         </section>
+        <div class="berlin-hacks">
+            <h4>FEATURED ARTICLES</h4>
+            <hr>
+            <h3>Berlin Hacks: Do More, Spend Less</h3>
+        </div>
+        <section class="artikel5-flex">
+            <Artikel5 image={image_11} title="alt tekst" tekst="TAG" overskrift="How to Eat Well on 5 euros" />
+            <Artikel5 image={image_12} title="alt tekst" tekst="TAG" overskrift="Creative Co-Working Spots for the Price of Coffee" />
+            <Artikel5 image={image_13} title="alt tekst" tekst="TAG" overskrift="Free Bike Tours & Walks You Can Join Anytime" />
+            <Artikel5 image={image_14} title="alt tekst" tekst="TAG" overskrift="Bethanien Creative Quarter: Artists in Kreuzberg  " />
+        </section>
+        <div class="berlin-hacks">
+            <h4>FEATURED ARTICLES</h4>
+            <hr>
+            <h3>Street Art, Stories & Surprises</h3>
+        </div>
+        <section class="artikel5-flex">
+            <Artikel5 image={image_15} title="alt tekst" tekst="TAG" overskrift="Meet the Murals of Kreuzberg" />
+            <Artikel5 image={image_16} title="alt tekst" tekst="TAG" overskrift="A Walking Map of Berlin’s Graffiti Hotspots " />
+            <Artikel5 image={image_17} title="alt tekst" tekst="TAG" overskrift="Stories Behind the Walls" />
+            <Artikel5 image={image_18} title="alt tekst" tekst="TAG" overskrift="Sticker Stories: Small art you see daily." />
+        </section>
     </body>
 </Layout>
 
@@ -89,6 +120,30 @@ import image_10 from "../assets/kalender3.webp"
     }
     .dato-tekst{
         margin-top: 80px;
+    }
+    .dato-tekst h3{
+        margin: 0;
+    }
+
+    /* Artikel5 css */
+    .artikel5-flex{
+        display: flex;
+        padding: 0 50px;
+        gap: 2rem;
+    }
+    .berlin-hacks{
+        margin-top: 100px;
+    }
+    .berlin-hacks h4, h3{
+        margin: 10px 50px;
+    }
+    .berlin-hacks hr{
+        opacity: 1;
+        margin: 0 50px;
+        width: 93%;
+    }
+    .berlin-hacks h3{
+        font-size: 1.8rem;
     }
 
 
