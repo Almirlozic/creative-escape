@@ -5,30 +5,77 @@ import image_01 from "../assets/eastside1.webp";
 import image_02 from "../assets/streger1.webp";
 import Artikel2 from "../components/Artikel2.astro";
 import image_03 from "../assets/img3.webp"
+import Artikel3 from "../components/Artikel3.astro";
+import image_04 from "../assets/img4.webp"
+import image_05 from "../assets/img5.webp"
+import image_06 from "../assets/img6.webp"
 ---
 
 <Layout>
-    <section class="grid_1-2">
-        <div>
-            <Artikel1
-              title="Why East Side Gallery Still Matters"
-              image={image_01}
-              link="/artikel1"
-            />
-            <Artikel1 title="The Neighborhoods Every Young Creative Should Explore" image={image_02} />
-        </div>
-        <div>
-            <Artikel2 image={image_03} title="artikel2 billede" tekst="UNMISSABLE FREE GEMS" overskrift="What can’t I miss in BERLIN as a CREATIVE first-timer?" />
-        </div>
-    </section>
+    <body>
+        <section class="grid_1-2">
+            <div>
+                <Artikel1
+                  title="Why East Side Gallery Still Matters"
+                  image={image_01}
+                  link="/artikel1"
+                />
+                <Artikel1 title="The Neighborhoods Every Young Creative Should Explore" image={image_02} />
+            </div>
+            <div>
+                <Artikel2 image={image_03} title="artikel2 billede" tekst="UNMISSABLE FREE GEMS" overskrift="What can’t I miss in BERLIN as a CREATIVE first-timer?" />
+            </div>
+        </section>
+        <section class="artikel3">
+            <p>FEATURED ARTICLES</p>
+            <hr class="linje">
+            <h3>FREE THINGS TO DO IN BERLIN</h3>
+            <div class="artikler">
+                <Artikel3 image={image_04} title="artikel3 billede" overskrift="Berlin's Best Free Galleries " />
+                <Artikel3 image={image_06} title="artikel3 billede" overskrift="Berlin's Best Free Galleries " />
+                <Artikel3 image={image_05} title="artikel3 billede" overskrift="Berlin's Best Free Galleries " />
+            </div>
+        </section>
+    </body>
 </Layout>
 
+
+<!-- css styling artikler -->
 <style>
     .grid_1-2{
         display: grid;
         grid-template-columns: 1fr 2fr;
         gap: 50px;
     }
+    .artikel3{
+        background-color: #ED922F;
+        color: white;
+    }
+
+    .artikel3 h3, p{
+        margin-left: 20px;
+    }
+    .artikel3 p{
+        padding-top: 50px;
+        font-size: 0.8rem;
+    }
+
+    .artikler{
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        padding-top: 40px;
+    }
+
+    .linje{
+        color: #ffff;
+        width: 97%;
+        margin-left: 20px;
+    }
+
+ 
+  
+   
 
 </style>
 
