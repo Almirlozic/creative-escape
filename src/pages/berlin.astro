@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Artikel1 from "../components/Artikel1.astro";
+import Dato from "../components/Dato.astro";
 import image_01 from "../assets/eastside1.webp";
 import image_02 from "../assets/streger1.webp";
 import Artikel2 from "../components/Artikel2.astro";
@@ -9,6 +10,11 @@ import Artikel3 from "../components/Artikel3.astro";
 import image_04 from "../assets/img4.webp"
 import image_05 from "../assets/img5.webp"
 import image_06 from "../assets/img6.webp"
+import image_07 from "../assets/artikel4.webp"
+import image_08 from "../assets/kalender1.webp"
+import image_09 from "../assets/kalender2.webp"
+import image_10 from "../assets/kalender3.webp"
+
 ---
 
 <Layout>
@@ -36,12 +42,58 @@ import image_06 from "../assets/img6.webp"
                 <Artikel3 image={image_05} title="artikel3 billede" overskrift="Berlin's Best Free Galleries " />
             </div>
         </section>
+        <section class="grid_2-1">
+            <Artikel2 image={image_07} title="artikel 4 billede" tekst="UNMISSABLE FREE GEMS" overskrift="What can’t I miss in BERLIN as a CREATIVE first-timer?" />
+            <div class="dato-tekst">
+                <h4>NEWS</h4>
+                <hr>
+                <h3>Latest News</h3>
+                <div class="dato-flex">
+                    <Dato 
+                    image={image_08} 
+                    title="billede 08 alt" 
+                    tekst={`Festival of Lights
+                8 – 15 October 2025
+                Berlin’s streets transform into a glowing dreamscape. Iconic landmarks like the Brandenburg Gate and TV Tower morph into light art canvases, while projections at Humboldt Forum stir powerful stories of freedom and hope.`} 
+                    />
+                    <Dato 
+                    image={image_09} 
+                    title="billede 08 alt" 
+                    tekst={`Creative Writing Workshop @ Art House Berlin
+14 & 28 October 2025, 18:30  Give words their wings. Join this hands-on workshop in Kreuzberg’s Art House and let your creative voice take center stage. Tickets start at €18.`} 
+                    />
+                    <Dato 
+                    image={image_10} 
+                    title="billede 08 alt" 
+                    tekst={`Kazuko Miyamoto: String Constructions – Solo Exhibition @ KW Institute
+31 October 2025 – 18 January 2026 (Opening: 30 October)  Explore material, space, and the body through Miyamoto’s radical post-minimal sculptures and installations. Feminist, performative, and truly poetic.`} 
+                    />
+                </div>
+            </div>
+        </section>
     </body>
 </Layout>
 
 
 <!-- css styling artikler -->
 <style>
+    /* Dato css */
+    .grid_2-1{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    hr{
+        width: 80%;
+        opacity: 0.3;
+        margin: 0;
+    }
+    .dato-tekst{
+        margin-top: 80px;
+    }
+
+
+
+    /* Artikel 3 css */
     .grid_1-2{
         display: grid;
         grid-template-columns: 1fr 2fr;
