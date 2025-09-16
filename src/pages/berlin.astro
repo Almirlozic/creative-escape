@@ -3,14 +3,32 @@ import Layout from "../layouts/Layout.astro";
 import Artikel1 from "../components/Artikel1.astro";
 import image_01 from "../assets/eastside1.webp";
 import image_02 from "../assets/streger1.webp";
+import Artikel2 from "../components/Artikel2.astro";
+import image_03 from "../assets/img3.webp"
 ---
 
 <Layout>
-  <Artikel1
-    title="Why East Side Gallery Still Matters"
-    image={image_01}
-    link="/artikel1"
-  />
-  <Artikel1 title="The Neighborhoods Every Young Creative Should Explore" image={image_02} />
+    <section class="grid_1-2">
+        <div>
+            <Artikel1
+              title="Why East Side Gallery Still Matters"
+              image={image_01}
+              link="/artikel1"
+            />
+            <Artikel1 title="The Neighborhoods Every Young Creative Should Explore" image={image_02} />
+        </div>
+        <div>
+            <Artikel2 image={image_03} title="artikel2 billede" tekst="UNMISSABLE FREE GEMS" overskrift="What can’t I miss in BERLIN as a CREATIVE first-timer?" />
+        </div>
+    </section>
 </Layout>
+
+<style>
+    .grid_1-2{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 50px;
+    }
+
+</style>
 
