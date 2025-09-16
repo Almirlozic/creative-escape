@@ -1,0 +1,23 @@
+---
+const { image, title, overskrift } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<div class="artikel3">
+  <Image src={image} alt={title} class="artikel-img" />
+  <h4>{overskrift}</h4>
+</div>
+
+<style>
+.artikel-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(100%);
+}
+.artikel-img:hover{
+    filter: none;
+    cursor: pointer;
+}
+
+</style>
