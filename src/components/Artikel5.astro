@@ -5,8 +5,8 @@ import { Image } from "astro:assets";
 
     <div class="artikel5">
         <Image src={image} alt={title} class="artikel-img" />
-        <p>{tekst}</p>
-        <h3>{overskrift}</h3>
+        <p class="underline">{tekst}</p>
+        <p>{overskrift}</p>
     </div>
 
     <style>
@@ -23,10 +23,12 @@ import { Image } from "astro:assets";
         .artikel5 img:hover{
             filter: none;
         }
-    
-        .artikel5 p{
+        .underline{
             font-size: 0.8rem;
             font-weight: 600;
             text-decoration: underline;
+        }
+        .artikel-p{
+            text-decoration: none;
         }
     </style>
